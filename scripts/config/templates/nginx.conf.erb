@@ -106,7 +106,7 @@ http {
 
   # fallback redirects named match
   <% redirects.each do |path, hash| %>
-    location @<%= path %> {
+    location <%= path %> {
       return <%= hash['status'] || 301 %> <%= hash['url'] %>;
     }
   <% end %>
